@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Página de Busca Interna</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    .search-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .search-form {
+      display: flex;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .search-input {
+      flex-grow: 1;
+      padding: 10px;
+      border: none;
+      font-size: 16px;
+    }
+    
+    .search-button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #f2f2f2;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function buscar() {
+      var query = document.getElementById('query').value.toLowerCase();
+      
+      if (query === 'cachoeira') {
+        window.location.href = 'pagina_cachoeiras.html';
+      } else {
+        alert('Nenhum resultado encontrado.');
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="search-container">
+    <form class="search-form" onsubmit="event.preventDefault(); buscar();">
+      <input class="search-input" type="text" id="query" placeholder="Pesquisar sobre cachoeiras">
+      <button class="search-button" type="submit">Pesquisar</button>
+    </form>
+  </div>
+</body>
+</html>
